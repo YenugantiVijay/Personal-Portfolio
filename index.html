@@ -298,7 +298,100 @@
         >
       </div>
     </section>
-    <footer>© <span id="y"></span> Vijay Kumar Yenuganti</footer>
+    <footer>&copy; <span id="y"></span> Vijay Kumar Yenuganti</footer>
+
+    <!-- Custom Themed Portfolio Chatbot Widget -->
+    <div id="chatbot-widget" class="cb-widget" aria-hidden="true">
+      <div class="cb-header">
+        <div class="cb-header-info">
+          <div class="cb-avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v3M9 2h6" />
+              <rect x="4" y="6" width="16" height="13" rx="3" />
+              <circle cx="9" cy="11" r="1.5" fill="currentColor" />
+              <circle cx="15" cy="11" r="1.5" fill="currentColor" />
+              <path d="M8 15h8" />
+              <path d="M2 11h2M20 11h2" />
+            </svg>
+            <span class="cb-online-badge"></span>
+          </div>
+          <div>
+            <b class="cb-title">Vijay's Assistant</b>
+            <span class="cb-status">Online &bull; Ready to help</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages Area -->
+      <div id="cb-messages" class="cb-messages"></div>
+
+      <!-- Suggestion Chips (Default Quick Questions) -->
+      <div id="cb-chips" class="cb-chips-bar" aria-label="Suggested quick questions"></div>
+
+      <!-- Input Form -->
+      <form id="cb-form" class="cb-form">
+        <input
+          id="cb-input"
+          class="cb-input"
+          type="text"
+          placeholder="Ask a question about Vijay..."
+          autocomplete="off"
+          required
+        />
+        <button id="cb-send-btn" class="cb-send-btn" type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Floating Toggle Button -->
+    <button
+      id="chatbot-toggle"
+      class="chatbot-toggle"
+      type="button"
+      aria-label="Open chat assistant"
+      aria-haspopup="dialog"
+      aria-expanded="false"
+      aria-controls="chatbot-widget"
+    >
+      <svg
+        class="bot-icon"
+        viewBox="0 0 24 24"
+        width="26"
+        height="26"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 2v3M9 2h6" />
+        <rect x="4" y="6" width="16" height="13" rx="3" />
+        <circle cx="9" cy="11" r="1.5" fill="currentColor" />
+        <circle cx="15" cy="11" r="1.5" fill="currentColor" />
+        <path d="M8 15h8" />
+        <path d="M2 11h2M20 11h2" />
+      </svg>
+      <svg
+        class="close-icon"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
 
     <script src="script.js"></script>
   </body>
