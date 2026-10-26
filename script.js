@@ -1,14 +1,42 @@
 document.getElementById("y").textContent = new Date().getFullYear();
 var bar = document.getElementById("bar");
-addEventListener(
+var nav = document.querySelector("nav");
+function updateNav() {
+  if (!nav) return;
+  var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+  if (sy > 15) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+}
+updateNav();
+window.addEventListener(
   "scroll",
   function () {
     var h = document.documentElement;
-    bar.style.width =
-      (h.scrollTop / (h.scrollHeight - h.clientHeight || 1)) * 100 + "%";
+    if (bar) {
+      bar.style.width =
+        (h.scrollTop / (h.scrollHeight - h.clientHeight || 1)) * 100 + "%";
+    }
+    updateNav();
   },
   { passive: true },
 );
+window.addEventListener("resize", updateNav);
+
+// Click on logo smoothly scrolls back to hero section
+var logoLink = document.querySelector(".nav-logo");
+if (logoLink) {
+  logoLink.addEventListener("click", function (e) {
+    var href = logoLink.getAttribute("href");
+    if (href === "#top" || href === "#") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}
+
 var els = document.querySelectorAll(".rv");
 if ("IntersectionObserver" in window) {
   var io = new IntersectionObserver(
@@ -97,6 +125,7 @@ if ("IntersectionObserver" in window) {
   });
   var roles = [
       "Front-End Developer",
+      "Founder @ Pixora Studio",
       "React + JavaScript builder",
       "Spreadsheet-to-code thinker",
     ],
@@ -219,6 +248,7 @@ if ("IntersectionObserver" in window) {
   if (!toggleBtn || !widget || !messagesContainer || !chipsContainer || !form || !input) return;
 
   var defaultQuestions = [
+    "✨ Pixora Studio",
     "👋 Who is Vijay?",
     "🛠️ Key Skills",
     "💼 Work Experience",
@@ -268,23 +298,27 @@ if ("IntersectionObserver" in window) {
     var text = rawText.toLowerCase().replace(/[?!.,]/g, " ").trim();
 
     if (/^(hi+|hello+|helo+w*|hey+|greetings|namaste|good\s*(morning|afternoon|evening))\b/.test(text)) {
-      return "Hello! 👋 I'm Vijay's AI assistant. What would you like to know about Vijay? You can tap any of the suggested questions below or ask me anything!";
+      return "Hello! 👋 I'm Vijay's AI assistant. What would you like to know about Vijay or his web studio, <b>Pixora Studio</b>? You can tap any of the suggested questions below or ask me anything!";
+    }
+
+    if (/\b(pixora|studio|agency|business|venture|company|client|services|hire\s*studio|consulting)\b/.test(text)) {
+      return "<b>Pixora Studio</b> is Vijay's independent digital web design &amp; engineering studio!<br><br><b>• What it does:</b> Handcrafts high-converting responsive business websites, commercial landing pages, cloud edge hosting, and maintenance retainers.<br><b>• Client Promise:</b> Direct 1-on-1 collaboration with Vijay, sub-second speed (100 Core Web Vitals), and zero builder lock-in.<br><br>👉 Explore the live studio at <a href='https://pixorastudio.website' target='_blank' rel='noopener'><b>pixorastudio.website</b></a>!";
     }
 
     if (/\b(who|about|bio|background|summary|profile|developer|vijay)\b/.test(text)) {
-      return "I'm <b>Vijay Kumar Yenuganti</b>, a Front-End Developer at <b>Mindminds Pvt. Ltd.</b><br><br>Before writing code, I worked for 1.6 years in accounts and warehouse management at Vamsi Enterprises. That experience shaped how I build interfaces: practical, detail-oriented, and made for real-world usability!";
+      return "I'm <b>Vijay Kumar Yenuganti</b>, a Front-End Developer at <b>MetaMinds Pvt. Ltd.</b> and Founder of <b>Pixora Studio</b>.<br><br>Before moving into full-time code, I worked for 1.6 years in accounts and warehouse management at Vamsi Enterprises. That experience shaped how I build interfaces: practical, detail-oriented, and made for real-world usability!";
     }
 
     if (/\b(skill|skills|stack|technolog|frontend|react|javascript|python|sql|html|css|tailwind|tools)\b/.test(text)) {
       return "Vijay's core technical toolkit:<br><br><b>• Front-End:</b> HTML5, CSS3, JavaScript (ES6+), React, Tailwind CSS, Bootstrap, Responsive Design<br><b>• Backend & Data:</b> REST APIs, Git &amp; GitHub, SQL, Python<br><b>• Operations:</b> Advanced Excel, Spreadsheets, Tally, Busy, Stock &amp; Warehouse Management";
     }
 
-    if (/\b(experience|work|journey|job|career|history|mindminds|vamsi|warehouse|accounts)\b/.test(text)) {
-      return "Vijay brings a dual background in development and operations:<br><br><b>1. Front-End Developer</b> @ Mindminds Pvt. Ltd. (Current)<br>Worked on the Mallampalli Group project (1.5 months) and currently building the <b>Fashion Hub</b> e-commerce platform.<br><br><b>2. Agent</b> @ Vamsi Enterprises (1.6 Years)<br>Day-to-day stock records, spreadsheets, and accounts, building rigorous accuracy and process thinking.";
+    if (/\b(experience|work|journey|job|career|history|metaminds|mindminds|vamsi|warehouse|accounts)\b/.test(text)) {
+      return "Vijay brings a dual background in development and operations:<br><br><b>1. Front-End Developer</b> @ MetaMinds Pvt. Ltd. (Current)<br>Worked on the Mallampalli Group project (1.5 months) and currently building the <b>Fashion Hub</b> e-commerce platform.<br><br><b>2. Agent</b> @ Vamsi Enterprises (1.6 Years)<br>Day-to-day stock records, spreadsheets, and accounts, building rigorous accuracy and process thinking.";
     }
 
     if (/\b(project|projects|fashion|mallampalli|portfolio|built|work|ecommerce|website)\b/.test(text)) {
-      return "Key projects built by Vijay:<br><br><b>• Fashion Hub (Ongoing):</b> An e-commerce website currently under active development at Mindminds.<br><b>• Mallampalli Group:</b> Enterprise frontend client delivered over 1.5 months.<br><b>• This Portfolio:</b> Hand-crafted with vanilla HTML/CSS/JS, smooth scroll animations, and dynamic light/dark theme switching.<br><br>Browse his repositories on <a href='https://github.com/YenugantiVijay' target='_blank' rel='noopener'>GitHub</a>!";
+      return "Key projects built by Vijay:<br><br><b>• Pixora Studio:</b> Independent digital web design & engineering studio (<a href='https://pixorastudio.website' target='_blank' rel='noopener'>pixorastudio.website</a>).<br><b>• Fashion Hub (Ongoing):</b> An e-commerce website currently under active development at MetaMinds.<br><b>• Mallampalli Group:</b> Enterprise client portal (<a href='http://mallampalligroup.in/' target='_blank' rel='noopener'>mallampalligroup.in</a>).<br><b>• MetaMinds Dashboard:</b> High-performance internal enterprise analytics suite.<br><b>• Smart Counseling:</b> Interactive student & career advisory demo.<br><br>Browse his repositories on <a href='https://github.com/YenugantiVijay' target='_blank' rel='noopener'>GitHub</a>!";
     }
 
     if (/\b(contact|email|phone|reach|hire|linkedin|github|message|collaborat)\b/.test(text)) {
@@ -296,7 +330,7 @@ if ("IntersectionObserver" in window) {
     }
 
     if (/\b(education|degree|study|college|school)\b/.test(text)) {
-      return "Vijay built his frontend engineering expertise through practical, hands-on production work at Mindminds Pvt. Ltd., applying problem-solving skills honed during his operations career.";
+      return "Vijay built his frontend engineering expertise through practical, hands-on production work at MetaMinds Pvt. Ltd., applying problem-solving skills honed during his operations career.";
     }
 
     return "I don't have an exact answer for that yet, but I can tell you all about Vijay's <b>skills</b>, <b>projects</b>, <b>work experience</b>, or <b>how to contact him</b>! Tap any of the topics below:";
