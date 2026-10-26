@@ -418,5 +418,20 @@ if ("IntersectionObserver" in window) {
   });
 })();
 
+/* Project cards touch / click toggle for touch devices */
+(function () {
+  var cards = document.querySelectorAll(".project-card");
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a") || e.target.closest("button")) return;
+      var wasActive = card.classList.contains("active");
+      cards.forEach(function (c) {
+        if (c !== card) c.classList.remove("active");
+      });
+      card.classList.toggle("active", !wasActive);
+    });
+  });
+})();
+
 
 

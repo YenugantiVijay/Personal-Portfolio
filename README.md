@@ -28,6 +28,8 @@ From spreadsheets 📊 to code 💻 — this site tells the story of my journey 
 
 ```
 Personal-Portfolio/
+├── assets/       # 🖼️ High-resolution project imagery
+│   └── projects/ # 📸 Project showcase previews
 ├── index.html    # 📄 Page structure & content
 ├── style.css     # 🎨 Styles, themes & animations
 ├── script.js     # ⚡ Interactions & theme toggle
