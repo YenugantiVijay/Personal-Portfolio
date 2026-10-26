@@ -21,8 +21,8 @@
       <div>
         <a class="h" href="#about">About</a
         ><a class="h" href="#journey">Journey</a
-        ><a class="h" href="#skills">Skills</a><a class="h" href="#work">Work</a
-        ><a href="#contact">Contact</a
+        ><a class="h" href="#skills">Skills</a
+        ><a class="h" href="#projects">Projects</a><a href="#contact">Contact</a
         ><button
           id="t"
           aria-label="Toggle light/dark mode"
@@ -217,61 +217,416 @@
       </div>
     </section>
 
-    <section id="work">
-      <div class="tag rv">05 / WORK</div>
-      <h2 class="rv">Projects at Mindminds</h2>
-      <div class="two" style="margin-bottom: 20px">
+    <section id="projects" style="position: relative">
+      <span
+        id="work"
+        aria-hidden="true"
+        style="position: absolute; top: -70px"
+      ></span>
+      <div class="project-header-row rv">
+        <div>
+          <div class="tag">05 / PORTFOLIO</div>
+          <h2>My Projects</h2>
+          <p class="project-section-desc">
+            A selection of real-world frontend applications, corporate client
+            portals, and data-driven systems I've engineered.
+          </p>
+        </div>
+        <a
+          class="btn-view-projects"
+          href="projects.html"
+          aria-label="View Projects"
+        >
+          <span>View Projects</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-up-right view-projects-icon"
+            aria-hidden="true"
+          >
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Project 1: Fashion Hub -->
         <div class="rv">
-          <div class="box tilt card-col">
-            <h3>MALLAMPALLI_GROUP</h3>
-            <p class="cp">
-              A project I worked on at Mindminds Pvt. Ltd. for about a month and
-              a half.
-            </p>
-            <div class="chips">
-              <span>1.5 months</span><span>Mindminds</span>
+          <div class="project-card" tabindex="0">
+            <img
+              class="project-card-img"
+              src="assets/projects/fashion-hub.jpg"
+              alt="Fashion Hub e-commerce website interface preview"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="project-card-header">
+                <span class="project-pill pill-blue">E-Commerce</span>
+                <span class="project-status"
+                  >Ongoing · MetaMinds Pvt. Ltd.</span
+                >
+              </div>
+              <h3 class="project-title">Fashion Hub</h3>
+              <p class="project-sub">E-Commerce Platform</p>
+
+              <!-- Hidden by default, reveals on hover -->
+              <div class="project-details">
+                <div class="project-details-inner">
+                  <p class="project-desc">
+                    Modern online storefront built with React and Tailwind CSS.
+                    Features dynamic product filtering, responsive cart state
+                    management, product showcases, and streamlined mobile
+                    checkout flows.
+                  </p>
+                  <div class="project-chips">
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>REST APIs</span>
+                    <span>Responsive UI</span>
+                  </div>
+                  <div class="project-actions">
+                    <a
+                      class="project-btn primary"
+                      href="https://github.com/YenugantiVijay"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                        />
+                      </svg>
+                      <span>View Repository</span>
+                    </a>
+                    <span class="project-tag-status"
+                      >Under active development</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subtle hint in non-hover state -->
+              <div class="project-hover-prompt">
+                <span>Hover for details</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Project 2: Mallampalli Group -->
         <div class="rv">
-          <div class="box b tilt card-col">
-            <h3>FASHION_HUB · ONGOING</h3>
-            <p class="cp">
-              An e-commerce website I'm currently working on at Mindminds Pvt.
-              Ltd.
-            </p>
-            <div class="chips">
-              <span>E-commerce</span><span>In progress</span>
+          <div class="project-card" tabindex="0">
+            <img
+              class="project-card-img"
+              src="assets/projects/mallampalli.jpg"
+              alt="Mallampalli Group corporate enterprise website preview"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="project-card-header">
+                <span class="project-pill pill-emerald">Corporate Web</span>
+                <span class="project-status">Delivered · 1.5 Month</span>
+              </div>
+              <h3 class="project-title">Mallampalli Group</h3>
+              <p class="project-sub">Client Enterprise Portal</p>
+
+              <div class="project-details">
+                <div class="project-details-inner">
+                  <ul class="project-bullets">
+                    <li>
+                      <strong
+                        >Developed full-stack web and admin portals</strong
+                      >
+                      for the Mallampalli Business Group at MetaM Pvt. Ltd.
+                    </li>
+                    <li>
+                      <strong>Integrated a custom admin CMS</strong> enabling
+                      the client to manage and update content seamlessly.
+                    </li>
+                    <li>
+                      <strong>Optimized cross-device responsiveness</strong> and
+                      typography to showcase core business divisions and
+                      services.
+                    </li>
+                  </ul>
+                  <div class="project-chips">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                    <span>Mobile First</span>
+                  </div>
+                  <div class="project-actions">
+                    <a
+                      class="project-btn primary"
+                      href="http://mallampalligroup.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Visit Live Website</span>
+                    </a>
+                    <span class="project-tag-status">Live Client Portal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-hover-prompt">
+                <span>Hover for details</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: MetaMinds Dashboard -->
+        <div class="rv">
+          <div class="project-card" tabindex="0">
+            <img
+              class="project-card-img"
+              src="assets/projects/metaminds-dashboard.jpg"
+              alt="MetaMinds Enterprise Analytics Dashboard preview"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="project-card-header">
+                <span class="project-pill pill-amber"
+                  >Enterprise Dashboard</span
+                >
+                <span class="project-status">MetaMinds Pvt. Ltd.</span>
+              </div>
+              <h3 class="project-title">MetaMinds Dashboard</h3>
+              <p class="project-sub">Internal Analytics &amp; Admin Suite</p>
+
+              <div class="project-details">
+                <div class="project-details-inner">
+                  <p class="project-desc">
+                    High-performance enterprise analytics dashboard recently
+                    developed for MetaMinds Pvt. Ltd. Features real-time KPI
+                    metrics, interactive data visualisations, user engagement
+                    telemetry, and responsive administrative control panels.
+                  </p>
+                  <div class="project-chips">
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>REST APIs</span>
+                    <span>Data Visualization</span>
+                    <span>Recharts</span>
+                  </div>
+                  <div class="project-actions">
+                    <a
+                      class="project-btn primary"
+                      href="https://github.com/YenugantiVijay"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                        />
+                      </svg>
+                      <span>MetaMinds Project</span>
+                    </a>
+                    <span class="project-tag-status"
+                      >Analytics &amp; Control</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-hover-prompt">
+                <span>Hover for details</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Smart Counseling -->
+        <div class="rv">
+          <div class="project-card" tabindex="0">
+            <img
+              class="project-card-img"
+              src="assets/projects/smart-counseling.jpg"
+              alt="Smart Counseling Demo Platform preview"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="project-card-header">
+                <span class="project-pill pill-violet">Smart Counseling</span>
+                <span class="project-status">Demo Project</span>
+              </div>
+              <h3 class="project-title">Smart Counseling</h3>
+              <p class="project-sub">Student &amp; Career Advisory Platform</p>
+
+              <div class="project-details">
+                <div class="project-details-inner">
+                  <p class="project-desc">
+                    Interactive smart counseling web platform recently developed
+                    as a demo project. Features student onboarding, intelligent
+                    advisor matching, appointment scheduling, and responsive
+                    guidance assessment forms.
+                  </p>
+                  <div class="project-chips">
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>Interactive UI</span>
+                    <span>Form Workflows</span>
+                    <span>Responsive</span>
+                  </div>
+                  <div class="project-actions">
+                    <a
+                      class="project-btn primary"
+                      href="https://github.com/YenugantiVijay"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                        />
+                      </svg>
+                      <span>View Demo Repo</span>
+                    </a>
+                    <span class="project-tag-status">Active Demo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-hover-prompt">
+                <span>Hover for details</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="two">
-        <div class="rv">
-          <div class="box tilt card-col">
-            <h3>&lt;github/&gt;</h3>
-            <p class="cp">My projects and experiments live on GitHub.</p>
-            <a
-              class="btn p"
-              href="https://github.com/YenugantiVijay"
-              target="_blank"
-              rel="noopener"
-              >Browse repositories</a
-            >
+
+      <!-- GitHub Repositories Banner -->
+      <div class="project-github-banner rv">
+        <div class="project-github-content">
+          <div class="project-github-badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
           </div>
-        </div>
-        <div class="rv">
-          <div class="box b tilt card-col">
-            <h3>this_portfolio</h3>
-            <p class="cp">
-              Hand-built with scroll animations, a live theme toggle and no
-              frameworks.
+          <div>
+            <h3>Explore More Repositories on GitHub</h3>
+            <p>
+              Check out my public repositories, code experiments, algorithms,
+              and open-source contributions.
             </p>
-            <div class="chips">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
           </div>
         </div>
+        <a
+          class="btn p"
+          href="https://github.com/YenugantiVijay"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Browse @YenugantiVijay</span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="margin-left: 6px; vertical-align: -2px"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -305,7 +660,16 @@
       <div class="cb-header">
         <div class="cb-header-info">
           <div class="cb-avatar" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M12 2v3M9 2h6" />
               <rect x="4" y="6" width="16" height="13" rx="3" />
               <circle cx="9" cy="11" r="1.5" fill="currentColor" />
@@ -326,7 +690,11 @@
       <div id="cb-messages" class="cb-messages"></div>
 
       <!-- Suggestion Chips (Default Quick Questions) -->
-      <div id="cb-chips" class="cb-chips-bar" aria-label="Suggested quick questions"></div>
+      <div
+        id="cb-chips"
+        class="cb-chips-bar"
+        aria-label="Suggested quick questions"
+      ></div>
 
       <!-- Input Form -->
       <form id="cb-form" class="cb-form">
@@ -338,8 +706,22 @@
           autocomplete="off"
           required
         />
-        <button id="cb-send-btn" class="cb-send-btn" type="submit" aria-label="Send message">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button
+          id="cb-send-btn"
+          class="cb-send-btn"
+          type="submit"
+          aria-label="Send message"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <line x1="22" y1="2" x2="11" y2="13"></line>
             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
