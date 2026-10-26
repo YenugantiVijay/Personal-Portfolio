@@ -306,7 +306,7 @@ if ("IntersectionObserver" in window) {
     }
 
     if (/\b(who|about|bio|background|summary|profile|developer|vijay)\b/.test(text)) {
-      return "I'm <b>Vijay Kumar Yenuganti</b>, a Front-End Developer at <b>MetaMinds Pvt. Ltd.</b> and Founder of <b>Pixora Studio</b>.<br><br>Before moving into full-time code, I worked for 1.6 years in accounts and warehouse management at Vamsi Enterprises. That experience shaped how I build interfaces: practical, detail-oriented, and made for real-world usability!";
+      return "I'm <b>Vijay Kumar Yenuganti</b>, Front-End Developer at <b>MetaMinds Pvt. Ltd.</b> and Founder of <b>Pixora Studio</b> (crafting high-converting business websites).<br><br>Backed by 1.6 years in operations and accounts, I blend data precision with modern engineering in <b>React and JavaScript</b> to build fast, clean, and impactful web solutions.";
     }
 
     if (/\b(skill|skills|stack|technolog|frontend|react|javascript|python|sql|html|css|tailwind|tools)\b/.test(text)) {
